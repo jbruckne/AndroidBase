@@ -2,7 +2,6 @@ package com.joebruckner.androidbase
 
 import android.os.Bundle
 
-
 open class FragmentLifecycleListener {
     open fun onFragmentAttached(fragment: BaseFragment) {}
     open fun onFragmentViewCreated(fragment: BaseFragment) {}
