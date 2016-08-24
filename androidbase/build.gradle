@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-def version_name = '1.1.0'
+def version_name = '1.1.1'
 
 group = 'com.joebruckner.androidbase'
 version = version_name
@@ -43,7 +43,7 @@ android {
         versionName version_name
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {

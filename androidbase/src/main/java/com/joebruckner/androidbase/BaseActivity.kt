@@ -7,10 +7,18 @@ import android.view.Menu
 abstract class BaseActivity : AppCompatActivity() {
     abstract val layoutId: Int
     open val menuId: Int = R.menu.empty
-    open val lifecycleListeners = mutableListOf<ActivityLifecycleListener>()
+    private val lifecycleListeners = mutableListOf<ActivityLifecycleListener>()
     var menu: Menu? = null
 
     open val TAG: String = javaClass.simpleName
+
+    fun addListener(listener: ActivityLifecycleListener) {
+        lifecycleListeners.add(listener)
+    }
+
+    fun removeListener(listener: ActivityLifecycleListener) {
+        lifecycleListeners.remove(listener)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

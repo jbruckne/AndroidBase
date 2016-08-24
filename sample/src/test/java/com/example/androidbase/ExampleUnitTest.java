@@ -1,4 +1,4 @@
-package com.joebruckner.androidbase.sample;
+package com.example.androidbase;
 
 import org.junit.Test;
 

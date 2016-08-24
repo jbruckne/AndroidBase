@@ -3,8 +3,8 @@ package com.joebruckner.androidbase
 
 class BaseContract {
 
-    interface Presenter {
-        fun attachView(view: View)
+    interface Presenter<in V: View> {
+        fun attachView(view: V)
         fun detachView()
     }
 

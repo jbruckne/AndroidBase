@@ -2,7 +2,7 @@ package com.joebruckner.androidbase
 
 import android.os.Bundle
 
-open class ActivityLifecycleListener {
+open class ActivityLifecycleListener() {
     open fun onActivityCreated(activity: BaseActivity, savedInstanceState: Bundle?) { }
     open fun onActivityStarted(activity: BaseActivity) { }
     open fun onActivityResumed(activity: BaseActivity) { }
